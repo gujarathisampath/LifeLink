@@ -1,0 +1,118 @@
+/* src/styles/about.css */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-bottom: 96px;
+}
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.about-card {
+  position: relative;
+  overflow: hidden;
+}
+.about-icon-wrapper {
+  background: rgba(239, 35, 60, 0.1);
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: var(--primary);
+}
+.about-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
+.about-card-desc {
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+.about-bg-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 32px;
+  opacity: 0.05;
+  transition: opacity 0.3s;
+  color: inherit;
+}
+.about-card:hover .about-bg-icon {
+  opacity: 0.1;
+}
+
+.profile-card {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.profile-content {
+  position: relative;
+  z-index: 10;
+}
+.profile-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(239, 35, 60, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  color: var(--primary);
+}
+.profile-name {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+.profile-role {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+}
+.profile-desc {
+  color: var(--text-muted);
+  max-width: 768px;
+  margin: 0 auto 40px;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+.profile-blob {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: rgba(239, 35, 60, 0.05);
+  border-radius: 50%;
+  bottom: -80px;
+  left: -80px;
+  filter: blur(60px);
+  z-index: 0;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.social-link {
+  padding: 12px;
+  background: var(--secondary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  transition: var(--transition);
+  text-decoration: none;
+}
+.social-link:hover {
+  background: var(--primary);
+  transform: translateY(-4px);
+}

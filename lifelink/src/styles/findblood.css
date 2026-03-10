@@ -1,0 +1,234 @@
+/* src/styles/findblood.css */
+.search-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 auto 64px;
+  max-width: 800px;
+}
+@media (min-width: 768px) {
+  .search-card {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.search-card .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary);
+  width: 20px;
+  height: 20px;
+}
+.search-select {
+  width: 100%;
+  padding: 16px 24px 16px 48px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #e1e4e8;
+  font-size: 1rem;
+  appearance: none;
+  outline: none;
+}
+.search-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 40px;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.results-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+.clear-button {
+  color: var(--primary);
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.clear-button:hover {
+  text-decoration: underline;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.donor-card {
+  transition: all 0.3s ease;
+}
+.donor-card:hover {
+  border-color: rgba(239, 35, 60, 0.3);
+  transform: translateY(-4px);
+}
+.donor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.donor-icon-wrapper {
+  background: rgba(239, 35, 60, 0.1);
+  padding: 12px;
+  border-radius: 16px;
+  color: var(--primary);
+}
+.donor-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+.donor-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.donor-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 24px;
+}
+.empty-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--accent);
+  margin: 0 auto 16px;
+}
+.empty-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+.empty-desc {
+  color: var(--text-muted);
+}
+.empty-text {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+}
+.loading-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--primary);
+  margin-bottom: 16px;
+  animation: spin 1s linear infinite;
+}
+
+.emergency-banner {
+  margin-top: 96px;
+  padding: 48px;
+  border-radius: 40px;
+  background: var(--primary);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.emergency-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.emergency-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .emergency-title { font-size: 2.5rem; }
+}
+.emergency-desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.125rem;
+  margin-bottom: 32px;
+}
+.btn-emergency {
+  background: white;
+  color: var(--primary);
+  padding: 16px 40px;
+  border-radius: 16px;
+  font-weight: 900;
+  font-size: 1.125rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.btn-emergency:hover {
+  transform: scale(1.05);
+}
+.emergency-blob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 256px;
+  height: 256px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(50%, -50%);
+  filter: blur(64px);
+}
