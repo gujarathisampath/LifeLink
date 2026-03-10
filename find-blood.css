@@ -1,0 +1,144 @@
+/* -------- Global -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff5f5;
+  color: #333;
+}
+
+/* -------- Navbar -------- */
+header {
+  background: #d90429;
+  padding: 15px 0;
+}
+
+.navbar {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* -------- Search Section -------- */
+.search-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.search-section h1 {
+  color: #d90429;
+  margin-bottom: 10px;
+}
+
+.search-box {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-box input,
+.search-box select,
+.search-box button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.search-box button {
+  background: #d90429;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* -------- Donor Cards -------- */
+.results {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.donor-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  width: 260px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #d90429;
+  margin-bottom: 10px;
+}
+
+.contact-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #d90429;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* -------- Map -------- */
+.map-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#map {
+  width: 90%;
+  height: 400px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background: #eee;
+}
+
+/* -------- Footer -------- */
+footer {
+  background: #d90429;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
